@@ -7,7 +7,7 @@ const HeaderNavBar = () => {
       });
     return (
         <div>
-            <h1>nav</h1>
+          
            <nav
         style={{
           borderBottom: "solid 1px",
@@ -15,6 +15,8 @@ const HeaderNavBar = () => {
         }}
       >
         <NavLink to="/home"   style={style}>Home</NavLink>
+        <NavLink to="/dashboard"   style={style}>Dashboard</NavLink>
+        <NavLink to="/statistics"   style={style}>Statistics</NavLink>
         <NavLink to="/about"  style={style} >About</NavLink>
       </nav> 
         </div>
