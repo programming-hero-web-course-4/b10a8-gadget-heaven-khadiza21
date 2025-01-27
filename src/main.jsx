@@ -9,14 +9,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import { router } from './Router/Router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HelmetProvider } from 'react-helmet-async';
+import { CartProvider } from './contextS/CartWishListContext';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HelmetProvider>
+   <CartProvider>
+   <HelmetProvider>
       <div >
         <RouterProvider router={router} />
       </div>
     </HelmetProvider>
     <ToastContainer />
+   </CartProvider>
   </StrictMode>,
 )

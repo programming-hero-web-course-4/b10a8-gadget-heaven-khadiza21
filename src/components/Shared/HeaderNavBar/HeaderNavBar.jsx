@@ -1,7 +1,9 @@
 
 import { NavLink } from 'react-router-dom';
+import { useCart } from '../../../contextS/CartWishListContext';
 
 const HeaderNavBar = () => {
+  const { cart, wishlist } = useCart(0);
     const style = (isActive ) => ({
         fontWeight: isActive ? "bold" : "normal",
       });
@@ -18,6 +20,7 @@ const HeaderNavBar = () => {
         <NavLink to="/dashboard"   style={style}>Dashboard</NavLink>
         <NavLink to="/statistics"   style={style}>Statistics</NavLink>
         <NavLink to="/about"  style={style} >About</NavLink>
+        <span>Cart: {cart.length}</span> | <span>Wishlist: {wishlist.length}</span>
       </nav> 
         </div>
     );
