@@ -1,10 +1,172 @@
-[
-    { "id": 1, "name": "Dell XPS 13", "price": 99.99, "category": "Laptops" },
-    { "id": 2, "name": "iPhone 14", "price": 89.99, "category": "Phones" },
-    { "id": 3, "name": "Apple Watch", "price": 39.99, "category": "Smart Watches" },
-    { "id": 4, "name": "MacBook Pro", "price": 99.99, "category": "MacBook" },
-    { "id": 5, "name": "Samsung Galaxy", "price":79.9, "category": "Phones" },
-    { "id": 6, "name": "HP Envy", "price":59.9, "category": "Laptops" },
-    { "id": 7, "name": "AirPods Pro", "price":19.9, "category": "Accessories" }
+  [
+    {
+      "product_id": "P001",
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://example.com/iphone15promax.jpg",
+      "category": "Smartphones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+        "LiDAR Scanner",
+        "Up to 2TB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://example.com/galaxys23ultra.jpg",
+      "category": "Smartphones",
+      "price": 1190,
+      "description": "Galaxy S23 Ultra features a stunning camera and powerful performance.",
+      "specification": [
+        "6.8-inch Dynamic AMOLED 2X display",
+        "Snapdragon 8 Gen 2",
+        "200MP Wide Camera",
+        "5000mAh battery",
+        "Stylus support"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://example.com/pixel8pro.jpg",
+      "category": "Smartphones",
+      "price": 999,
+      "description": "Pixel 8 Pro redefines photography and AI capabilities.",
+      "specification": [
+        "6.7-inch OLED display",
+        "Tensor G3 processor",
+        "50MP triple-camera system",
+        "AI-powered features",
+        "128GB to 1TB storage options"
+      ],
+      "availability": false,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P004",
+      "product_title": "OnePlus 12",
+      "product_image": "https://example.com/oneplus12.jpg",
+      "category": "Smartphones",
+      "price": 899,
+      "description": "OnePlus 12 brings flagship performance with superior design.",
+      "specification": [
+        "6.7-inch AMOLED display",
+        "Snapdragon 8 Gen 3",
+        "50MP Hasselblad Camera",
+        "Fast charging 150W",
+        "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Xiaomi 13 Pro",
+      "product_image": "https://example.com/xiaomi13pro.jpg",
+      "category": "Smartphones",
+      "price": 799,
+      "description": "Xiaomi 13 Pro combines elegance with top-notch features.",
+      "specification": [
+        "6.73-inch AMOLED display",
+        "Snapdragon 8 Gen 2",
+        "50MP Leica Camera",
+        "4820mAh battery",
+        "120W fast charging"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Sony Xperia 1 V",
+      "product_image": "https://example.com/xperia1v.jpg",
+      "category": "Smartphones",
+      "price": 1199,
+      "description": "Sony Xperia 1 V offers cinematic experiences in your hand.",
+      "specification": [
+        "6.5-inch 4K OLED display",
+        "Snapdragon 8 Gen 2",
+        "48MP triple-camera system",
+        "Cinematic mode",
+        "5000mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.3
+    },
+    {
+      "product_id": "L001",
+      "product_title": "MacBook Pro 16-inch",
+      "product_image": "https://example.com/macbookpro16.jpg",
+      "category": "Laptops",
+      "price": 2499,
+      "description": "MacBook Pro with M2 Max for unparalleled performance.",
+      "specification": [
+        "16-inch Liquid Retina XDR display",
+        "M2 Max chip",
+        "32GB RAM, 1TB SSD",
+        "100W fast charging",
+        "macOS Ventura"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "L002",
+      "product_title": "Dell XPS 13 Plus",
+      "product_image": "https://example.com/dellxps13plus.jpg",
+      "category": "Laptops",
+      "price": 1699,
+      "description": "The Dell XPS 13 Plus redefines ultrabook performance.",
+      "specification": [
+        "13.4-inch OLED display",
+        "12th Gen Intel Core i7",
+        "16GB RAM, 512GB SSD",
+        "Compact design",
+        "Windows 11 Pro"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "S001",
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://example.com/applewatchseries9.jpg",
+      "category": "Smartwatches",
+      "price": 599,
+      "description": "Apple Watch Series 9 with advanced health features and new gestures.",
+      "specification": [
+        "Always-On Retina display",
+        "Blood Oxygen Sensor",
+        "ECG App",
+        "S9 chip",
+        "Swimproof design"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },  
+    {
+      "product_id": "S002",
+      "product_title": "Samsung Galaxy Watch 6 Classic",
+      "product_image": "https://example.com/galaxywatch6classic.jpg",
+      "category": "Smartwatches",
+      "price": 499,
+      "description": "Galaxy Watch 6 Classic combines timeless design with powerful features.",
+      "specification": [
+        "1.5-inch Super AMOLED display",
+        "Exynos W930 chip",
+        "Body Composition Analysis",
+        "Sleep Tracking",
+        "Rotating bezel"
+      ],
+      "availability": false,
+      "rating": 4.6
+    }
   ]
-  

@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
         element: <Statistics />
       },
       {
-        path: '/gadget/:id',
+        path: '/gadget/:product_id',
         element: <GadgetsDetail />
       },
       {

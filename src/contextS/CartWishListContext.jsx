@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
  
   const addToWishlist = (product) => {
  
-    if (!wishlist.some((item) => item.id === product.id)) {
+    if (!wishlist.some((item) => item.product_id === product.product_id)) {
       setWishlist((prevWishlist) => [...prevWishlist, product]);
     }
   };
@@ -24,13 +24,13 @@ export const CartProvider = ({ children }) => {
 
   const removeFromWishlist = (productId) => {
     setWishlist((prevWishlist) =>
-      prevWishlist.filter((product) => product.id !== productId)
+      prevWishlist.filter((product) => product.product_id !== productId)
     );
   };
 
 
   const moveToCartFromWishlist = (product) => {
-    removeFromWishlist(product.id); 
+    removeFromWishlist(product.product_id); 
     addToCart(product); 
   };
 
@@ -39,6 +39,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         wishlist,
+        setCart,
         addToCart,
         addToWishlist,
         removeFromWishlist,

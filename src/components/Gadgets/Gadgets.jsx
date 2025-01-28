@@ -13,6 +13,7 @@ const Gadgets = () => {
             .then((data) => {
                 setProducts(data);
                 setFilteredProducts(data);
+                console.log('data', data)
             });
     }, []);
 
@@ -25,7 +26,7 @@ const Gadgets = () => {
         }
     };
 
-    const categories = ["All Product", "Laptops", "Phones", "Accessories", "Smart Watches", "MacBook", "Cloths"];
+    const categories = ["All Product",  "Smartphones","Laptops", "Smartwatches", "MacBook"];
 
 
     return (
@@ -44,7 +45,7 @@ const Gadgets = () => {
                 ))}
             </div>
 
-          
+
             <div className="flex-grow-1">
                 {filteredProducts.length === 0 ? (
                     <Alert variant="warning" className="text-center">
@@ -53,17 +54,17 @@ const Gadgets = () => {
                 ) : (
                     <Row xs={1} sm={2} md={3} lg={4} className="g-4">
                         {filteredProducts.map((product) => (
-                            <Col key={product.id}>
+                            <Col key={product.product_id}>
                                 <Card>
                                     <Card.Img
                                         variant="top"
                                         src="https://via.placeholder.com/150"
-                                        alt={product.name}
+                                        alt={product.product_title}
                                     />
                                     <Card.Body>
-                                        <Card.Title>{product.name}</Card.Title>
+                                        <Card.Title>{product.product_title}</Card.Title>
                                         <Card.Text>Price: {product.price}</Card.Text>
-                                        <Link to={`/gadget/${product.id}`}>
+                                        <Link to={`/gadget/${product.product_id}`}>
                                             <Button variant="outline-primary">View Details</Button>
                                         </Link>
                                     </Card.Body>
