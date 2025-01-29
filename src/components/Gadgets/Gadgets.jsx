@@ -26,7 +26,7 @@ const Gadgets = () => {
         }
     };
 
-    const categories = ["All Product",  "Smartphones","Laptops", "Smartwatches", "MacBook"];
+    const categories = ["All Product", "Smartphones", "Laptops", "Smartwatches", "MacBook"];
 
 
     return (
@@ -58,8 +58,10 @@ const Gadgets = () => {
                                 <Card>
                                     <Card.Img
                                         variant="top"
-                                        src="https://via.placeholder.com/150"
+                                        src={product.product_image}
                                         alt={product.product_title}
+                                        className="img-fluid rounded"
+                                        style={{ maxHeight: "300px", objectFit: "contain" }}
                                     />
                                     <Card.Body>
                                         <Card.Title>{product.product_title}</Card.Title>

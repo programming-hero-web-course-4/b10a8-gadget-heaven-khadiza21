@@ -2,7 +2,7 @@
     {
       "product_id": "P001",
       "product_title": "Apple iPhone 15 Pro Max",
-      "product_image": "https://example.com/iphone15promax.jpg",
+      "product_image": "/gadgets/1.webp",
       "category": "Smartphones",
       "price": 1299,
       "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -19,7 +19,7 @@
     {
       "product_id": "P002",
       "product_title": "Samsung Galaxy S23 Ultra",
-      "product_image": "https://example.com/galaxys23ultra.jpg",
+      "product_image": "/gadgets/2.jpg",
       "category": "Smartphones",
       "price": 1190,
       "description": "Galaxy S23 Ultra features a stunning camera and powerful performance.",
@@ -36,7 +36,7 @@
     {
       "product_id": "P003",
       "product_title": "Google Pixel 8 Pro",
-      "product_image": "https://example.com/pixel8pro.jpg",
+      "product_image": "/gadgets/3.webp",
       "category": "Smartphones",
       "price": 999,
       "description": "Pixel 8 Pro redefines photography and AI capabilities.",
@@ -53,7 +53,7 @@
     {
       "product_id": "P004",
       "product_title": "OnePlus 12",
-      "product_image": "https://example.com/oneplus12.jpg",
+      "product_image": "/gadgets/4.png",
       "category": "Smartphones",
       "price": 899,
       "description": "OnePlus 12 brings flagship performance with superior design.",
@@ -70,7 +70,7 @@
     {
       "product_id": "P005",
       "product_title": "Xiaomi 13 Pro",
-      "product_image": "https://example.com/xiaomi13pro.jpg",
+      "product_image": "/gadgets/5.jpg",
       "category": "Smartphones",
       "price": 799,
       "description": "Xiaomi 13 Pro combines elegance with top-notch features.",
@@ -87,7 +87,7 @@
     {
       "product_id": "P006",
       "product_title": "Sony Xperia 1 V",
-      "product_image": "https://example.com/xperia1v.jpg",
+      "product_image": "/gadgets/6.jpg",
       "category": "Smartphones",
       "price": 1199,
       "description": "Sony Xperia 1 V offers cinematic experiences in your hand.",
@@ -104,7 +104,7 @@
     {
       "product_id": "L001",
       "product_title": "MacBook Pro 16-inch",
-      "product_image": "https://example.com/macbookpro16.jpg",
+      "product_image": "/gadgets/7.webp",
       "category": "Laptops",
       "price": 2499,
       "description": "MacBook Pro with M2 Max for unparalleled performance.",
@@ -121,7 +121,7 @@
     {
       "product_id": "L002",
       "product_title": "Dell XPS 13 Plus",
-      "product_image": "https://example.com/dellxps13plus.jpg",
+      "product_image": "/gadgets/8.jpg",
       "category": "Laptops",
       "price": 1699,
       "description": "The Dell XPS 13 Plus redefines ultrabook performance.",
@@ -138,7 +138,7 @@
     {
       "product_id": "S001",
       "product_title": "Apple Watch Series 9",
-      "product_image": "https://example.com/applewatchseries9.jpg",
+      "product_image": "/gadgets/9.webp",
       "category": "Smartwatches",
       "price": 599,
       "description": "Apple Watch Series 9 with advanced health features and new gestures.",
@@ -155,7 +155,7 @@
     {
       "product_id": "S002",
       "product_title": "Samsung Galaxy Watch 6 Classic",
-      "product_image": "https://example.com/galaxywatch6classic.jpg",
+      "product_image": "/gadgets/10.jpg",
       "category": "Smartwatches",
       "price": 499,
       "description": "Galaxy Watch 6 Classic combines timeless design with powerful features.",
