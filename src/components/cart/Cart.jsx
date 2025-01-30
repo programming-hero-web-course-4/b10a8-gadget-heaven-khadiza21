@@ -1,11 +1,9 @@
-import { Button, ListGroup } from "react-bootstrap";
+import { Button, Card, Col, Image, Row } from "react-bootstrap";
 import { useCart } from "../../contextS/CartWishListContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-
 const Cart = () => {
-
   const { cart, setCart } = useCart();
   const navigate = useNavigate();
 
@@ -15,9 +13,11 @@ const Cart = () => {
     const sortedCart = [...cart].sort((a, b) => b.price - a.price);
     setCart(sortedCart);
   };
-  
+
   const deleteProduct = (productId) => {
-    setCart((prevCart) => prevCart.filter((product) => product.product_id !== productId));
+    setCart((prevCart) =>
+      prevCart.filter((product) => product.product_id !== productId)
+    );
   };
 
   const handlePurchase = () => {
@@ -25,54 +25,86 @@ const Cart = () => {
     setCart([]);
 
     Swal.fire({
-      title: "Congratulations!",
-      text: "Your purchase was successful!",
       icon: "success",
+      title: "Payment Successfully! ",
+      text: `Thanks for purchasing. Total Price: ${totalPrice}`,
       confirmButtonText: "Close",
     }).then(() => {
       navigate("/");
     });
   };
 
-
   return (
-    <div className="container mt-4">
-    <h1>Cart</h1>
-    <h3 className="mt-3">Total Price: ${totalPrice.toFixed(2)}</h3>
-    <div className="d-flex gap-3 mt-3">
-      <Button variant="primary" onClick={sortCartByPrice}>
-        Sort by Price (Desc)
-      </Button>
-      <Button
-        variant="success"
-        onClick={handlePurchase}
-        disabled={cart.length === 0}
-      >
-        Purchase
-      </Button>
-    </div>
-
-    {cart.length === 0 ? (
-      <p className="mt-4">Your cart is empty.</p>
-    ) : (
-      <ListGroup className="mt-4">
-        {cart.map((product, index) => (
-          <ListGroup.Item
-            key={index}
-            className="d-flex justify-content-between align-items-center"
-          >
-            <div>
-              <h5>{product.product_title}</h5>
-              <p>Price: ${product.price}</p>
-            </div>
-            <Button variant="danger" onClick={() => deleteProduct(product.product_id)}>
-              Delete
+    <>
+      <div className="container mt-4">
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <h4>Cart</h4>
+          <div className="d-flex gap-3 flex-column flex-sm-row align-items-center">
+            <h5>Total cost: ${totalPrice.toFixed(2)}</h5>
+            <Button
+              variant="outline-primary"
+              onClick={sortCartByPrice}
+              style={{ borderColor: "#9538E2", color: "#9538E2" }}
+              className="btn"
+            >
+              Sort by Price (Desc)
             </Button>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-    )}
-  </div>
+            <Button
+              variant=""
+              onClick={handlePurchase}
+              disabled={cart.length === 0}
+              className="btn text-light"
+              style={{ backgroundColor: "#9538E2" }}
+            >
+              Purchase
+            </Button>
+          </div>
+        </div>
+
+        {cart.length === 0 ? (
+          <p className="text-center my-5 py-5 shadow rounded">
+            Your cart is empty.
+          </p>
+        ) : (
+          <div className="mt-4">
+            {cart.map((item) => (
+              <Card
+                key={item.product_id}
+                className="mb-3 p-3 shadow-sm rounded"
+              >
+                <Row className="align-items-center">
+                  <Col xs={4} sm={3} md={2} lg={1} className="text-center">
+                    <Image
+                      src={item.product_image}
+                      rounded
+                      fluid
+                      className="w-75 w-sm-100"
+                    />
+                  </Col>
+                  <Col xs={6} sm={7} md={8} lg={9}>
+                    <h5 className="text-truncate">{item.product_title}</h5>
+                    <p className="d-none d-sm-block">{item.description}</p>
+                    <p>
+                      <strong>Price: ${item.price.toFixed(2)}</strong>
+                    </p>
+                  </Col>
+                  <Col xs={2} className="text-end">
+                    <Button
+                      variant="outline-danger"
+                      size="sm"
+                      className="fw-bold rounded-circle"
+                      onClick={() => deleteProduct(item.product_id)}
+                    >
+                      &times;
+                    </Button>
+                  </Col>
+                </Row>
+              </Card>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

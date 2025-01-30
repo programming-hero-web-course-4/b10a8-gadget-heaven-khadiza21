@@ -42,7 +42,7 @@ const HeaderNavBar = () => {
             </Nav>
 
             <Nav>
-              <span className="d-flex fw-bold">
+              <span className="d-flex fw-bold ">
                 <svg
                   style={{ width: "25px", height: "25px", fill: "#9538E2" }}
                   viewBox="0 0 576 512"
