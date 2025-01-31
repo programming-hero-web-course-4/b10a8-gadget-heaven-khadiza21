@@ -84,7 +84,7 @@ const Gadgets = () => {
                                             <Card.Title>{product.product_title}</Card.Title>
                                             <Card.Text>Price: ${product.price}</Card.Text>
                                             <Link to={`/gadget/${product.product_id}`}>
-                                                <Button variant="" className="custom-button">View Details</Button>
+                                                <button className="custom-button">View Details</button>
                                             </Link>
                                         </Card.Body>
                                     </Card>

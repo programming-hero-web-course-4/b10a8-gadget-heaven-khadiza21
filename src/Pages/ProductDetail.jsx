@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet";
+import GadgetsDetail from "../components/Gadgets/GadgetsDetail";
 
 
 const ProductDetail = () => {
     return (
         <div>
-            <h1>This is Product Details</h1>
+            <Helmet> <title>Gadget Heaven | Details</title> </Helmet>
+            <GadgetsDetail />
         </div>
+
     );
 };
 

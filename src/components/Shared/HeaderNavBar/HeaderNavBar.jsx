@@ -6,7 +6,7 @@ import { useCart } from "../../../contextS/CartWishListContext";
 const HeaderNavBar = () => {
   const { cart, wishlist } = useCart(0);
   const location = useLocation();
-  const isHome = location.pathname === "/home" && "/";
+  const isHome = location.pathname === "/home";
 
   const navbarStyle = {
     backgroundColor: isHome ? "#9538E2" : "transparent",
@@ -34,9 +34,9 @@ const HeaderNavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" style={navbarStyle}>
       <Container>
-        <Navbar.Brand to='/' className="fw-bold" style={{ color: isHome ? "#FFFFFF" : "#000000" }}>
+        <Navbar.Brand  className="fw-bold" style={{ color: isHome ? "#FFFFFF" : "#000000" }}>
           <NavLink
-            to="/"
+            to="/home"
             className="fw-bold text-decoration-none"
             style={{ color: isHome ? "#FFFFFF" : "#9538E2" }}
           >

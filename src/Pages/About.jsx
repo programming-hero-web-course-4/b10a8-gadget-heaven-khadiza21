@@ -1,11 +1,13 @@
 import { Container } from "react-bootstrap";
 import Service from "../components/Service/Service";
 import Contact from "../components/Contact/Contact";
+import { Helmet } from "react-helmet";
 
 const About = () => {
    
     return (
         <div>
+            <Helmet> <title>Gadget Heaven | About</title> </Helmet>
             <div className="py-5" style={{ backgroundColor: '#9538E2' }}>
                 <Container>
                     <h2 className="text-center text-light ">About</h2>

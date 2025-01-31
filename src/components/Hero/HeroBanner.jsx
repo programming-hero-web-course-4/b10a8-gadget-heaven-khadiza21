@@ -1,7 +1,12 @@
 import { Button, Container } from 'react-bootstrap';
 import banner from '../../assets/banner.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const HeroBanner = () => {
+
+    const navigate = useNavigate();
+
+
     return (
         <>
             <div className='py-5' style={{ backgroundColor: '#9538E2' }}>
@@ -9,7 +14,9 @@ const HeroBanner = () => {
                     <div className='text-center text-light py-5 mb-5'>
                         <h1 className='fw-bold pt-5 pb-3'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                         <p className='pb-3'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all! Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-                        <Button className='bg-light fw-bold border-0 mb-5' style={{ color: '#9538e2', borderRadius: '24px' }}>Shop Now</Button>
+                        <Button className='bg-light fw-bold border-0 mb-5' style={{ color: '#9538e2', borderRadius: '24px' }}
+                         onClick={() => navigate("/dashboard")}
+                        >Shop Now</Button>
                     </div>
                 </Container>
             </div>

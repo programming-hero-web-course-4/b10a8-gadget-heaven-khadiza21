@@ -40,8 +40,8 @@ const Wishlist = () => {
                     <strong>Price: ${item.price.toFixed(2)}</strong>
                   </p>
                   <Button onClick={() => moveToCartFromWishlist(item)}
-                     style={{borderRadius:'24px', padding:'10px 20px', width:'150px', backgroundColor:'#9538E2'}} className="border-0"
-                    >  Add to Cart  </Button>
+                    style={{ borderRadius: '24px', padding: '10px 20px', width: '150px', backgroundColor: '#9538E2' }} className="border-0"
+                  >  Add to Cart  </Button>
                 </Col>
                 <Col xs={2} className="text-end">
 
@@ -55,8 +55,8 @@ const Wishlist = () => {
     </div>
 
 
-    
-    </>
+
+  </>
   );
 };
 

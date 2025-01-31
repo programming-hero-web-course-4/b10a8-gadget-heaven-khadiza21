@@ -9,7 +9,7 @@ import About from "../Pages/About";
 import DashBoard from "../Pages/DashBoard";
 import Wishlist from "../components/wishlist/Wishlist";
 import Cart from "../components/cart/Cart"
-import GadgetsDetail from "../components/Gadgets/GadgetsDetail";
+import ProductDetail from "../Pages/ProductDetail";
 
 
 export const router = createBrowserRouter([
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/gadget/:product_id',
-        element: <GadgetsDetail />
+        element: <ProductDetail />
       },
       {
         path: '/dashboard',

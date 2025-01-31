@@ -18,7 +18,7 @@ const GadgetsDetail = () => {
     const { product_id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {wishlist,  addToCart, addToWishlist } = useCart();
+    const { wishlist, addToCart, addToWishlist } = useCart();
 
 
     useEffect(() => {
@@ -128,7 +128,7 @@ const GadgetsDetail = () => {
 
                             <div className="mt-3">
                                 <Button
-                                style={{ backgroundColor: '#9538E2' }}
+                                    style={{ backgroundColor: '#9538E2' }}
                                     variant=""
                                     className="me-2 text-light fw-bold"
                                     onClick={() => addToCart(product)}

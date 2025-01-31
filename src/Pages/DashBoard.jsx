@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import Cart from '../components/cart/Cart'
 import Wishlist from '../components/wishlist/Wishlist'
+import { Helmet } from "react-helmet";
 
 const DashBoard = () => {
 
@@ -13,7 +14,7 @@ const DashBoard = () => {
 
   return (
     <div>
-
+<Helmet> <title>Gadget Heaven | Dashboard</title> </Helmet>
      
         <div className="text-center py-3 " style={{ backgroundColor: '#9538E2' }}>
           <Container className="py-5">

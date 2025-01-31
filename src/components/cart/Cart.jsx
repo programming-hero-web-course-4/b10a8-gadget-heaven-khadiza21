@@ -2,6 +2,7 @@ import { Button, Card, Col, Image, Row } from "react-bootstrap";
 import { useCart } from "../../contextS/CartWishListContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const { cart, setCart } = useCart();
@@ -9,15 +10,24 @@ const Cart = () => {
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
+
+
+
   const sortCartByPrice = () => {
-    const sortedCart = [...cart].sort((a, b) => b.price - a.price);
-    setCart(sortedCart);
+    setCart((prevCart) => [...prevCart].sort((a, b) => b.price - a.price));
   };
 
   const deleteProduct = (productId) => {
+    const removedProduct = cart.find((product) => product.product_id === productId);
+  
     setCart((prevCart) =>
       prevCart.filter((product) => product.product_id !== productId)
     );
+
+    if (removedProduct) {
+      toast.success(`${removedProduct.product_title} removed from cart Successfully!`, { position: "top-right" });
+    }
+    
   };
 
   const handlePurchase = () => {
