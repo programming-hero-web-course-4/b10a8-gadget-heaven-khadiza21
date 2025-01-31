@@ -14,6 +14,7 @@ import { Cart, Heart, Star, StarFill } from "react-bootstrap-icons";
 
 
 const GadgetsDetail = () => {
+
     const { product_id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -91,7 +92,7 @@ const GadgetsDetail = () => {
                             <h3 className="fw-bold">{product.product_title}</h3>
                             <p className="fs-5">
                                 <strong>Price:</strong>{" "}
-                                <span className="text-success fw-bold">${product.price}</span>
+                                <span style={{ color: '#9538E2' }} className=" fw-bold">${product.price}</span>
                             </p>
 
                             {product.availability ? (
@@ -127,8 +128,9 @@ const GadgetsDetail = () => {
 
                             <div className="mt-3">
                                 <Button
-                                    variant="primary"
-                                    className="me-2"
+                                style={{ backgroundColor: '#9538E2' }}
+                                    variant=""
+                                    className="me-2 text-light fw-bold"
                                     onClick={() => addToCart(product)}
                                     disabled={!product.availability}
                                 >
