@@ -6,7 +6,8 @@ import { useCart } from "../../../contextS/CartWishListContext";
 const HeaderNavBar = () => {
   const { cart, wishlist } = useCart(0);
   const location = useLocation();
-  const isHome = location.pathname === "/home";
+  const isHome = location.pathname === "/home" || location.pathname === "/";
+
 
   const navbarStyle = {
     backgroundColor: isHome ? "#9538E2" : "transparent",
